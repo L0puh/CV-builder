@@ -1,6 +1,12 @@
 # CV-builder
+## Tech stack: 
+### Backend:
+- Flask 
+- ... 
+### Frontend:
+- ...
 
 ## Features: 
-- [ ] create\delete\edit CV-template
+- [ ] choose from various CV-templates
 - [ ] put user's data to a template 
 - [ ] download in different formats 
