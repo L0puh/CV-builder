@@ -6,5 +6,10 @@
 </head>
 <body>
     <h2>Choose template</h2> 
+    <form method='post' action='{{url_for(".choose_template")}}'>
+        {{ form.csrf_token }}
+        {{ form.choice }}
+        {{ form.submit }}
+    </form>          
 </body>
 </html>
