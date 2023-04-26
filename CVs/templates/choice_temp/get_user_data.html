@@ -6,7 +6,13 @@
     <title>Choose template</title>
 </head>
 <body>
-    <h2>FORM FOR WORK STUFF...</h2> 
-          
+    <form enctype='multipart/form-data' method='post' action='{{url_for(".get_user_data")}}'>
+        {{form.csrf_token}}
+       <p>{{form.name(placeholder='name')}}</p>
+       <p>{{form.email(placeholder='email')}}</p>
+       <p>{{form.about(placeholder='about')}}</p>
+       <p>{{form.image}}</p>
+       <p>{{form.submit}}</p>
+    </form>
 </body>
 </html>

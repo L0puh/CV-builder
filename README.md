@@ -13,6 +13,6 @@
 - [ ] download in different formats 
 
 ## TODO:
-- [ ] get_user_data form 
+- [x] get_user_data form 
 - [ ] make templates for cvs
-- [ ] ...
+- [ ] remove images after downloading a cv
