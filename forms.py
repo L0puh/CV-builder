@@ -10,5 +10,8 @@ class Input_data_form(FlaskForm):
     image=FileField()
     email=EmailField()
     about=TextAreaField()
+    skills=TextAreaField()
+    work_experience=TextAreaField()
+    education=TextAreaField()
     submit=SubmitField()
 
