@@ -13,7 +13,7 @@
 - [ ] download in different formats 
 
 ## TODO:
-- [ ] FIX: converting to pdf with image
+- [x] FIX: converting to pdf with image
 - [x] get_user_data form 
 - [ ] make templates for cvs
 - [ ] remove images after downloading a cv
