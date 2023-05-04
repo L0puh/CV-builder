@@ -5,6 +5,7 @@
     <title>Choose template</title>
 </head>
 <body>
+    <a href='{{ url_for("index") }}'/> << </a>
     <form enctype='multipart/form-data' method='post' action='{{url_for(".get_user_data")}}'>
         {{form.csrf_token}}
        <p>{{form.name(placeholder='name')}}</p>

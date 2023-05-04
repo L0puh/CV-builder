@@ -13,11 +13,13 @@ def generate_html():
         f.write(render_template('test.html',
             image=image, name=session['name'],
             email=session['email'], about=session['about'],
-            skills=session['skills'], edu=session['edu'], wo
-            rk=session['work_exp']))
+            skills=session['skills'], edu=session['edu'],
+            work=session['work_exp']))
 
     out=html_to_pdf(html_file, pdf_file)
-    if out: return send_from_directory(current_app.root_path,
+    if out:
+        session['file'] = out
+        return send_from_directory(current_app.root_path,
                 pdf_file, as_attachment=True,
                 download_name=pdf_file)
 
