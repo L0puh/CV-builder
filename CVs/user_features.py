@@ -34,5 +34,6 @@ def get_user_data():
         session['edu']=form.education.data
         session['skills']=form.skills.data
         session['image']=os.path.join(current_app.config['UPLOAD_FOLDER'], filename)
-        return redirect(url_for('convert.generate_html'))
+
+        return redirect(url_for('convert.generate_html', file_format=form.file_format.data))
     return render_template('get_user_data.html', form=form)

@@ -4,17 +4,18 @@
 - Flask 
 - WTF-forms 
 - wkhtmltopdf, pdfkit (for converting)
+- html-to-json
 ### Frontend:
 - next.js
 
 ## Features: 
-- [ ] choose from various CV-templates
+- [x] choose from various CV-templates
 - [x] put user's data to a template 
-- [ ] download in different formats 
+- [x] download in different formats(json, pdf)
 
 ## TODO:
 - [x] FIX: converting to pdf with image
 - [x] get-user-data form 
-- [ ] make logic for choosing templates
+- [x] make logic for choosing templates
 - [ ] make templates for cvs
 - [x] remove images/htmls after downloading a cv

@@ -13,5 +13,6 @@ class Input_data_form(FlaskForm):
     skills=TextAreaField()
     work_experience=TextAreaField()
     education=TextAreaField()
+    file_format=SelectField(choices=['json', 'pdf'])
     submit=SubmitField()
 
