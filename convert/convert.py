@@ -9,8 +9,9 @@ def generate_html():
     html_file=current_app.config['UPLOAD_FILE_HTML']
     pdf_file=current_app.config['UPLOAD_FILE_PDF']
     image=os.path.join(session["image"])
+    template = session['choice']
     with open(html_file,'w') as f:
-        f.write(render_template('test.html',
+        f.write(render_template(template,
             image=image, name=session['name'],
             email=session['email'], about=session['about'],
             skills=session['skills'], edu=session['edu'],

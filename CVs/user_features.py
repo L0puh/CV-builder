@@ -15,7 +15,7 @@ def choose_template():
     form=Choice_temp_form()
     if form.validate_on_submit:
         choice=form.choice.data
-        session['choice']=choice
+        session['choice']=f'{choice}.html'
         if choice: return redirect(url_for('.get_user_data'))
     return render_template('choose_temp.html', form=form)
 
