@@ -7,17 +7,14 @@ convert=Blueprint('convert', __name__, template_folder='templates/convert')
 
 @convert.route('/generate_html/<file_format>')
 def generate_html(file_format):
-    html = render_template(session['choice'], data=session,
-            image=os.path.join(session['image']))
+    html = render_template(session['choice'], data=session)
     if file_format == 'pdf':
         return create_pdf(current_app.config['HTML'], html, current_app.config['PDF'])
     return create_json(html, current_app.config['JSON'])
 
 def create_pdf(html_file, html, pdf_file):
-    with open(html_file,'w') as f:
-        f.write(html)
-    out=html_to_pdf(html_file, pdf_file)
-    session['file'] = out
+    with open(html_file,'w') as f: f.write(html)
+    session['file'] = html_to_pdf(html_file, pdf_file)
     return send_from_directory(current_app.root_path,
             pdf_file, as_attachment=True,
             download_name=pdf_file)

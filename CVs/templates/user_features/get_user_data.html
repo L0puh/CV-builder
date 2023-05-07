@@ -5,6 +5,13 @@
     <title>Choose template</title>
 </head>
 <body>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      <h4 style='color:red'>{{ message }}</h4>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
     <a href='{{ url_for("index") }}'/> << </a>
     <form enctype='multipart/form-data' method='post' action='{{url_for(".get_user_data")}}'>
         {{form.csrf_token}}
