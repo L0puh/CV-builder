@@ -8,8 +8,13 @@
     <h2>Choose template</h2> 
     <form method='post' action='{{url_for(".choose_template")}}'>
         {{ form.csrf_token }}
-        {{ form.choice }}
-        {{ form.submit }}
+        {% for sub in form.choice %}
+        <p>
+        {{sub}}
+        <img style='width:100px'src='static/preview/{{sub.data}}.jpeg'>
+        </p> 
+        {% endfor %}
+       <p> {{ form.submit }}</p>
     </form>          
 </body>
 </html>

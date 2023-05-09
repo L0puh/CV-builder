@@ -1,9 +1,9 @@
 from flask_wtf import FlaskForm
 from wtforms import SubmitField, SelectField, StringField, \
-        FileField, EmailField, TextAreaField
+        FileField, EmailField, TextAreaField, RadioField
 
 class Choice_temp_form(FlaskForm):
-    choice=SelectField(choices=['temp1', 'temp2'])
+    choice=RadioField(choices=[('temp1', 'temp1'), ('temp2', 'temp2')])
     submit=SubmitField()
 class Input_data_form(FlaskForm):
     name=StringField()
