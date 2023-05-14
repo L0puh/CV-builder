@@ -1,9 +1,8 @@
 import os, pdfkit, html_to_json, json
 from flask import Blueprint, session, send_file,\
-    render_template, send_from_directory, current_app
+    render_template, send_from_directory, current_app, url_for
 
 convert=Blueprint('convert', __name__, template_folder='templates/convert')
-
 
 @convert.route('/generate_html/<file_format>')
 def generate_html(file_format):
